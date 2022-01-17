@@ -4,7 +4,7 @@
 #
 Name     : pypi-iniconfig
 Version  : 1.1.1
-Release  : 19
+Release  : 20
 URL      : https://files.pythonhosted.org/packages/23/a2/97899f6bd0e873fed3a7e67ae8d3a08b21799430fb4da15cfedf10d6e2c2/iniconfig-1.1.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/23/a2/97899f6bd0e873fed3a7e67ae8d3a08b21799430fb4da15cfedf10d6e2c2/iniconfig-1.1.1.tar.gz
 Summary  : iniconfig: brain-dead simple config-ini parsing
@@ -14,18 +14,14 @@ Requires: pypi-iniconfig-license = %{version}-%{release}
 Requires: pypi-iniconfig-python = %{version}-%{release}
 Requires: pypi-iniconfig-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: iniconfig
-Provides: iniconfig-python
-Provides: iniconfig-python3
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
+BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(setuptools_scm)
 BuildRequires : pypi(wheel)
-BuildRequires : pytest
-BuildRequires : setuptools_scm
-BuildRequires : tox
-BuildRequires : pypi(virtualenv)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 =======================================================
@@ -68,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641445283
+export SOURCE_DATE_EPOCH=1642463143
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
